@@ -1,0 +1,21 @@
+﻿<Properties StartupConfiguration="{EB13E745-CD72-E82F-F468-722D24053D2B}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PersonController/PlayerController.cs">
+    <Files>
+      <File FileName="Assets/Scripts/PersonController/PlayerController.cs" Line="131" Column="17" />
+      <File FileName="Assets/Scripts/ParkourSystem/ParkourControllerScript.cs" Line="86" Column="32" />
+      <File FileName="Assets/Scripts/ParkourSystem/ParkourAction.cs" />
+      <File FileName="Assets/Scripts/ParkourSystem/EnviromentScaner.cs" />
+      <File FileName="Assets/Scripts/PersonController/CameraController.cs" />
+      <File FileName="Assets/Scripts/ParkourSystem/CustomActions/VaultAction.cs" />
+      <File FileName="Assets/Scripts/Util/PhysicsUtil.cs" />
+      <File FileName="Assets/Scripts/PersonController/ControlStoppingAction.cs" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="dae0f3ec-3ec0-4658-94cc-a47736d64b51" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

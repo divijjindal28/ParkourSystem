@@ -1,19 +1,21 @@
 ﻿<Properties StartupConfiguration="{EB13E745-CD72-E82F-F468-722D24053D2B}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/ParkourSystem/ParkourControllerScript.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/ClimbingSystem/ClimbPoint.cs">
     <Files>
-      <File FileName="Assets/Scripts/PersonController/PlayerController.cs" Line="142" Column="35" />
-      <File FileName="Assets/Scripts/ParkourSystem/ParkourControllerScript.cs" Line="50" Column="9" />
+      <File FileName="Assets/Scripts/PersonController/PlayerController.cs" Line="62" Column="20" />
+      <File FileName="Assets/Scripts/ParkourSystem/ParkourControllerScript.cs" />
       <File FileName="Assets/Scripts/ParkourSystem/ParkourAction.cs" />
-      <File FileName="Assets/Scripts/ParkourSystem/EnviromentScaner.cs" />
-      <File FileName="Assets/Scripts/PersonController/CameraController.cs" />
+      <File FileName="Assets/Scripts/ParkourSystem/EnviromentScaner.cs" Line="41" Column="17" />
+      <File FileName="Assets/Scripts/PersonController/CameraController.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/ParkourSystem/CustomActions/VaultAction.cs" />
       <File FileName="Assets/Scripts/Util/PhysicsUtil.cs" />
-      <File FileName="Assets/Scripts/PersonController/ControlStoppingAction.cs" />
+      <File FileName="Assets/Scripts/PersonController/ControlStoppingAction.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/ClimbingSystem/ClimbController.cs" Line="41" Column="35" />
+      <File FileName="Assets/Scripts/ClimbingSystem/ClimbPoint.cs" Line="7" Column="5" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="dae0f3ec-3ec0-4658-94cc-a47736d64b51" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="3a04dd8d-252f-496c-851b-da3e087a20d8" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
