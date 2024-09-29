@@ -131,7 +131,8 @@ public class PlayerController : MonoBehaviour
     }
 
 
-    public IEnumerator DoAction(string AnimName, MatchTargetParams matchTargetParams, Quaternion targetRotation, bool rotate = false,
+    public IEnumerator DoAction(string AnimName, MatchTargetParams matchTargetParams = null, Quaternion targetRotation = new Quaternion()
+        , bool rotate = false,
         float postActionDelay = 0f, bool mirror = false )
     {
 
@@ -172,6 +173,10 @@ public class PlayerController : MonoBehaviour
         inAction = false;
     }
 
+    public void ResetTargetRotation() {
+        targetRotation = transform.rotation;
+    }
+
     void MatchTarget(MatchTargetParams mp)
     {
         if (animator.isMatchingTarget) return;
@@ -187,6 +192,12 @@ public class PlayerController : MonoBehaviour
             animator.SetFloat("moveAmount", 0);
             targetRotation = transform.rotation;
         }
+    }
+
+    public void EnableCharacterController(bool enabled)
+    {
+        characterController.enabled = enabled;
+        
     }
 
     public bool HasControl {

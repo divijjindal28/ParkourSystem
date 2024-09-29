@@ -1354,8 +1354,28 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7846048560926678581, guid: 3ce369cbf50a74013af367a1e416afac, type: 3}
+      propertyPath: mountPoint
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7846048561955883581, guid: 3ce369cbf50a74013af367a1e416afac, type: 3}
+      propertyPath: mountPoint
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7846048561955883581, guid: 3ce369cbf50a74013af367a1e416afac, type: 3}
       propertyPath: neighbours.Array.data[0].isTwoWay
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7846048561986444492, guid: 3ce369cbf50a74013af367a1e416afac, type: 3}
+      propertyPath: mountPoint
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7846048562060468057, guid: 3ce369cbf50a74013af367a1e416afac, type: 3}
+      propertyPath: mountPoint
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7846048562663997790, guid: 3ce369cbf50a74013af367a1e416afac, type: 3}
+      propertyPath: mountPoint
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2201,12 +2221,20 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7846048560926678581, guid: 3ce369cbf50a74013af367a1e416afac, type: 3}
+      propertyPath: mountPoint
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7846048560926678581, guid: 3ce369cbf50a74013af367a1e416afac, type: 3}
       propertyPath: neighbours.Array.data[0].point
       value: 
       objectReference: {fileID: 1221359851}
     - target: {fileID: 7846048560926678581, guid: 3ce369cbf50a74013af367a1e416afac, type: 3}
       propertyPath: neighbours.Array.data[0].direction.x
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7846048561955883581, guid: 3ce369cbf50a74013af367a1e416afac, type: 3}
+      propertyPath: mountPoint
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7846048561955883581, guid: 3ce369cbf50a74013af367a1e416afac, type: 3}
       propertyPath: neighbours.Array.size
@@ -2229,6 +2257,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7846048561986444492, guid: 3ce369cbf50a74013af367a1e416afac, type: 3}
+      propertyPath: mountPoint
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7846048561986444492, guid: 3ce369cbf50a74013af367a1e416afac, type: 3}
       propertyPath: neighbours.Array.data[0].point
       value: 
       objectReference: {fileID: 1825908460}
@@ -2237,12 +2269,20 @@ PrefabInstance:
       value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 7846048562060468057, guid: 3ce369cbf50a74013af367a1e416afac, type: 3}
+      propertyPath: mountPoint
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7846048562060468057, guid: 3ce369cbf50a74013af367a1e416afac, type: 3}
       propertyPath: neighbours.Array.data[0].point
       value: 
       objectReference: {fileID: 1131608958}
     - target: {fileID: 7846048562060468057, guid: 3ce369cbf50a74013af367a1e416afac, type: 3}
       propertyPath: neighbours.Array.data[0].direction.x
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7846048562663997790, guid: 3ce369cbf50a74013af367a1e416afac, type: 3}
+      propertyPath: mountPoint
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7846048562663997790, guid: 3ce369cbf50a74013af367a1e416afac, type: 3}
       propertyPath: neighbours.Array.size

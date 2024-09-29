@@ -24,21 +24,38 @@ public class ClimbController : MonoBehaviour
             {
                 if (enviromentScaner.ClimbLedgeCheck(transform.forward, out RaycastHit ledgeHit))
                 {
-                    currentPoint = ledgeHit.transform.GetComponent<ClimbPoint>();
+                    currentPoint = GetNearestClimbPoint(ledgeHit.transform, ledgeHit.point);
                     Debug.Log("abc");
                     playerController.SetControl(false);
 
-                    StartCoroutine(JumpToLedge("IdleToHang", ledgeHit.transform, 0.41f, 0.54f));
+                    StartCoroutine(JumpToLedge("IdleToHang", currentPoint.transform, 0.41f, 0.54f));
                 }
+            }
+            if (Input.GetButton("Drop") && !playerController.inAction) {
+                if (enviromentScaner.DropLedgeCheck(out RaycastHit ledgeHit)) {
+                    currentPoint = GetNearestClimbPoint(ledgeHit.transform, ledgeHit.point);
+                    playerController.SetControl(false);
+                    StartCoroutine(JumpToLedge("DropToHang", currentPoint.transform, 0.30f, 0.45f,handOffset: new Vector3(0.25f, 0.2f,-0.2f)));
+                }
+
             }
         }
         else
         {
+            if (Input.GetButton("Drop") && !playerController.inAction) {
+                StartCoroutine(JumpFromHang());
+                return;
+            }
             float h = Mathf.Round(Input.GetAxis("Horizontal"));
             float v = Mathf.Round(Input.GetAxis("Vertical"));
             var inputDir = new Vector2(h, v);
 
             if (playerController.inAction || inputDir == Vector2.zero) return;
+
+            if (currentPoint.MountPoint && inputDir.y == 1) {
+                StartCoroutine(MountFromHang());
+                return;
+            }
 
             var neighbour = currentPoint.GetNeighbour(inputDir);
             if (neighbour == null) return;
@@ -117,6 +134,39 @@ public class ClimbController : MonoBehaviour
             Vector3 finalPos = ledge.position + ledge.forward * OffVal.z + Vector3.up * OffVal.y - hDir * OffVal.x;
             Debug.Log("GetHandPosition : "+ finalPos);
             return finalPos;
+        }
+
+        IEnumerator JumpFromHang() {
+            playerController.isHanging = false;
+            yield return playerController.DoAction("JumpFromHang");
+            playerController.ResetTargetRotation();
+            playerController.SetControl(true);
+        }
+
+        IEnumerator MountFromHang()
+        {
+            playerController.isHanging = false;
+            yield return playerController.DoAction("MountFromHang");
+            playerController.EnableCharacterController(true);
+            yield return new WaitForSeconds(0.5f);
+            playerController.ResetTargetRotation();
+            playerController.SetControl(true);
+        }
+
+        ClimbPoint GetNearestClimbPoint(Transform ledge, Vector3 hitPoint)
+        {
+            var points = ledge.GetComponentsInChildren<ClimbPoint>();
+            ClimbPoint nearestPoint = null;
+            float nearestPointDist = Mathf.Infinity;
+            foreach (ClimbPoint point in points) {
+                float distance = Vector3.Distance(point.transform.position, hitPoint);
+                if (distance < nearestPointDist) {
+                    nearestPoint = point;
+
+                    nearestPointDist = distance;
+                }
+            }
+            return nearestPoint;
         }
     }
 }
